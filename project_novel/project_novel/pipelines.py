@@ -11,7 +11,7 @@ import json
 
 class ProjectNovelPipeline:
     def open_spider(self,spider):
-        self.fp = open("nv-v2.json","w",encoding="utf-8")
+        self.fp = open("nv-4.json","w",encoding="utf-8")
     def process_item(self, item, spider):
         item = OrderedDict(item)
         item = json.dumps(item,ensure_ascii=False)
