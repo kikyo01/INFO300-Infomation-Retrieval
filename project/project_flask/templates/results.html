@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Found {{hits}} for query {{keywords}}: </h1>
+        {% for doc in docs %}
+        <p>Title:{{doc["_source"]['Title']}}</p>
+        <p>Author:{{doc["_source"]['Author']}}</p>
+        <p>Score:{{doc["_source"]['Score']}}</p>
+        <p>Publishing_house:{{doc["_source"]['Publishing_house']}}</p>
+        <p>Year_of_publication:{{doc["_source"]['Year_of_publication']}}</p>
+        <p>Number_of_pages:{{doc["_source"]['Number_of_pages']}}</p>
+        <p>ISBN:{{doc["_source"]['ISBN']}}</p>
+        <p>Brief_introduction:{{doc["_source"]['Brief_introduction']}}</p>
+
+        {% endfor %}
+        <!-- <h1> This is a result page   </h1>
+        <h2> keywords : {{keywords}}</h2> -->
+    </body>
+</html>
