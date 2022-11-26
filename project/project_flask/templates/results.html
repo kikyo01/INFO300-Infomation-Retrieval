@@ -19,6 +19,7 @@
         
         {% for doc in docs %}
         <div class="data-box">
+            <span>Rank {{i}}</span>
         <p>Title:{{doc["_source"]['Title']}}</p>
         <p>Author:{{doc["_source"]['Author']}}</p>
         <p>Score:{{doc["_source"]['Score']}}</p>

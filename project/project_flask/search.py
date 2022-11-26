@@ -31,12 +31,12 @@ def search():
         }
     }
  # Send a search request with the query to server
-    res = es.search(index="songch20_project_novel-2022-11", body=query)
+    res = es.search(index="songch20_project_novel_1-2022-11", body=query)
     hits = res["hits"]["total"]["value"]
     return render_template('results.html', keywords=keywords, hits=hits, docs=res["hits"]["hits"])# , keywords=keywords, hits=hits, docs=res["hits"]["hits"]
 es = Elasticsearch(
-    ['210.26.48.81:9201'],
-    http_auth=('songch20', 'songch20'),
+    ['219.246.90.69:9200'], #'219.246.90.69:9200'           #'210.26.48.81:9201'
+    http_auth=('elastic', 'oss&&ibm'),  #elastic #oss&&ibm                           #songch20
     scheme="http",
     port=9200,
     # ssl_context = context,
