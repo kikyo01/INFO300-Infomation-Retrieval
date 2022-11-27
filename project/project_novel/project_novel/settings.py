@@ -91,16 +91,16 @@ USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 REQUEST_FINGERPRINTER_IMPLEMENTATION = '2.7'
 TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
 
-LOG_FILE = "nv-v6.log"
+LOG_FILE = "nv-v7.log"
 
 ITEM_PIPELINES = {
     'scrapyelasticsearch.scrapyelasticsearch.ElasticSearchPipeline': 500
 }
 
-ELASTICSEARCH_SERVERS = ['219.246.90.69:9201']
+ELASTICSEARCH_SERVERS = ['219.246.90.69:9200']
 # ELASTICSEARCH_PORT = 9200 # If port 80 leave blank
 ELASTICSEARCH_USERNAME = 'elastic'   #elastic
 ELASTICSEARCH_PASSWORD = 'oss&&ibm'  #oss&&ibm
 ELASTICSEARCH_INDEX_DATE_FORMAT = '%Y-%m'
-ELASTICSEARCH_INDEX = 'songch20_project_novel_1'
+ELASTICSEARCH_INDEX = 'songch20_project_novel_2'
 ELASTICSEARCH_TYPE = '_doc'

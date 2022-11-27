@@ -24,7 +24,7 @@ class NvSpider(scrapy.Spider):
         print("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         #只有标题、评分、简介不用content     不同的小说的content不同所以split要定义
         title = response.meta["title"]
-        score  = response.xpath('//div[@class="rating_self clearfix"]/strong/text()').extract_first()
+        score  = float(response.xpath('//div[@class="rating_self clearfix"]/strong/text()').extract_first())
 
         content = response.xpath('//div[@id="info"]').extract_first()
         if "作者" in content :
@@ -44,7 +44,8 @@ class NvSpider(scrapy.Spider):
         else:
             number_of_pages = ""
         if "定价:" in content:
-            Price  = content.split("定价:")[1].split("<br>")[0].split(">")[1].strip(' ')
+            # content.split("定价:")[1].split("<br>")[0].split(">")[1].strip(' ')
+             Price  = float(content.split("定价:")[1].split("<br>")[0].split(">")[1].split('元')[0].strip(' '))
         else:
             Price = ""
         if "ISBN:" in content :

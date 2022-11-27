@@ -44,5 +44,5 @@ for doc in docs:
   print(doc["_source"]['Year_of_publication'])
   print(doc["_source"]['Number_of_pages'])
   print(doc["_source"]['ISBN'])
-  print(type(doc["_source"]['Brief_introduction']
+  print(type(doc["_source"]['Brief_introduction']))
   print("-----------------------")
